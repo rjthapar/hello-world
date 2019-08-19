@@ -1,0 +1,91 @@
+﻿@model OFGWebApp.Models.OFGHome
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>OFGHome</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.userId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.userId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.jiraNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.jiraNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.applicationDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.applicationDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.functionalitiesToImplement)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.functionalitiesToImplement)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.expectedUatDeliveryDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.expectedUatDeliveryDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.prodDeploymentDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.prodDeploymentDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pendingInfo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pendingInfo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.comments)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.comments)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
