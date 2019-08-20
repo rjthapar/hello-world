@@ -167,6 +167,10 @@
     <Compile Include="Migrations\201908191340208_updateModel.Designer.cs">
       <DependentUpon>201908191340208_updateModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201908200953439_updateModel1.cs" />
+    <Compile Include="Migrations\201908200953439_updateModel1.Designer.cs">
+      <DependentUpon>201908200953439_updateModel1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\OFGHome.cs" />
     <Compile Include="Models\OFGWebAppContext.cs" />
@@ -283,6 +287,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201908191340208_updateModel.resx">
       <DependentUpon>201908191340208_updateModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908200953439_updateModel1.resx">
+      <DependentUpon>201908200953439_updateModel1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

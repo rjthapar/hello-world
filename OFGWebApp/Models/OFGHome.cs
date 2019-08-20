@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
@@ -38,13 +39,21 @@ namespace OFGWebApp.Models
     }
     public enum Status
     {
+        [Description("IN PROGRESS")]
         INPROGRESS,
+        [Description("OPEN")]
         OPEN,
+        [Description("UAT")]
         UAT,
+        [Description("UAT REVIEW")]
         UATREVIEW,
+        [Description("PROD")]
         PROD,
+        [Description("PROD REVIEW")]
         PRODREVIEW,
+        [Description("CLOSED")]
         CLOSED,
+        [Description("PENDING")]
         PENDING
 
     }
