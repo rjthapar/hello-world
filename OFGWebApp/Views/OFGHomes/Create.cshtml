@@ -1,4 +1,5 @@
-﻿@model OFGWebApp.Models.OFGHome
+﻿@using OFGWebApp.Models
+@model OFGHome
 
 @{
     ViewBag.Title = "Create";
@@ -6,12 +7,21 @@
 }
 
 <h2>Create</h2>
+@*<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 
+<script>
 
-@using (Html.BeginForm()) 
+  $(document).ready(function() {
+      $('.datepicker').datepicker();
+  });
+</script>*@
+
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>OFGHome</h4>
         <hr />
@@ -43,7 +53,9 @@
         <div class="form-group">
             @Html.LabelFor(model => model.status, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.status, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.DropDownListFor(m => m.status,
+                    new SelectList(Enum.GetValues(typeof(Status))),
+                    "Select Status")
                 @Html.ValidationMessageFor(model => model.status, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -59,7 +71,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.expectedUatDeliveryDate, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.expectedUatDeliveryDate, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.expectedUatDeliveryDate, new { htmlAttributes = new { @class = "form-control datepicker" } })
                 @Html.ValidationMessageFor(model => model.expectedUatDeliveryDate, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -67,7 +79,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.prodDeploymentDate, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.prodDeploymentDate, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.prodDeploymentDate, new { htmlAttributes = new { @class = "form-control datepicker" } })
                 @Html.ValidationMessageFor(model => model.prodDeploymentDate, "", new { @class = "text-danger" })
             </div>
         </div>
